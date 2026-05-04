@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pure Ceylon Carved | Gallery</title>
@@ -66,7 +67,29 @@
             <button class="btn-shop">Shop Now</button>
         </div>
     </div>
-</section>    
+</section> 
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="modal-body">
+            <div class="product-left">
+                <img id="modalImg" src="" alt="Product Image">
+            </div>
+            <div class="product-right">
+                <h2 id="modalTitle">Product Name</h2>
+                <div id="modalPrice" class="highlight-price">$0.00</div>
+                <p id="modalDescription">Description goes here...</p>
+                <ul class="product-specs">
+                    <li><strong>Material:</strong> Authentic Kaduru Wood (Leya)</li>
+                    <li><strong>Size:</strong> <span id="modalSize">Standard</span></li>
+                    <li><strong>Shipping:</strong> <span id="modalShipping">Free Worldwide</span></li>
+                    <li><strong>Handcrafted:</strong> 100% Traditional Methods</li>
+                </ul>
+                <button class="btn-blue">ADD TO CART</button>
+            </div>
+        </div>
+    </div>
+</div>   
          </div>
     </section>
 
