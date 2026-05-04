@@ -1,11 +1,11 @@
-/* Premium Fonts */
+/* ✅ Premium Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
 
 :root {
-    --gold: #c5a059;
-    --dark-bg: #0a0a0a;
-    --card-bg: #161616;
-    --text-cream: #f5f5dc;
+    --gold: #c5a059; /* Copper/Gold Accent */
+    --dark-bg: #0a0a0a; /* Deep Black Background */
+    --card-bg: #161616; /* Slightly lighter black for cards */
+    --text-cream: #f5f5dc; /* Off-white for text */
 }
 
 body {
@@ -16,7 +16,7 @@ body {
     line-height: 1.6;
 }
 
-/* Header & Navigation */
+/* ✅ Header & Logo (Centered for Premium Look) */
 header {
     padding: 30px;
     text-align: center;
@@ -49,14 +49,14 @@ nav a:hover {
     color: var(--gold);
 }
 
-/* Hero Section */
+/* 🖼️ Hero Section (Naga/Mayura Background) */
 .hero {
     height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1605648916319-cf082f7524a1?auto=format&fit=crop&q=80'); /* Temporary Background */
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('hero-mask-bg.jpg'); /* Replace with your uploaded image filename */
     background-size: cover;
     background-position: center;
 }
@@ -65,14 +65,36 @@ nav a:hover {
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
     margin-bottom: 10px;
+    color: var(--text-cream);
 }
 
-/* Curated Collection Grid */
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.btn-premium {
+    padding: 15px 30px;
+    background-color: #c5a059;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.btn-premium:hover {
+    background-color: #f5f5dc;
+}
+
+/* ✅ Collection Grid */
 .collection-title {
     text-align: center;
     margin: 50px 0;
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
+    color: var(--gold);
 }
 
 .gallery {
@@ -130,12 +152,4 @@ nav a:hover {
 .btn-invoke:hover {
     background: var(--gold);
     color: black;
-}
-
-footer {
-    text-align: center;
-    padding: 40px;
-    font-size: 0.8rem;
-    border-top: 1px solid #222;
-    opacity: 0.6;
 }
