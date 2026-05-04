@@ -42,16 +42,10 @@ nav a:hover { color: var(--gold); }
 
 /* Hero Section - ඔයාගේ පින්තූරය මෙතනට එනවා */
 .hero {
-    height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    /* පින්තූරයේ නම හරියටම තියෙන්න ඕනේ */
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('Gemini_Generated_Image_aitqk3aitqk3aitq.png');
+    /* ... අනිත් කෝඩ් ... */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero.png');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
 }
 
 .hero h1 {
