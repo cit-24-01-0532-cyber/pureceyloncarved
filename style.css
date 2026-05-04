@@ -49,11 +49,43 @@ header {
     text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
 }
 
-.gallery {
+./* Gallery Grid Layout */
+.gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: #161616;
+    padding: 20px;
+    border: 1px solid #222;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    border-color: #c5a059;
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain; /* පින්තූරය කැපෙන්නේ නැතිව පේන්න */
+    margin-bottom: 15px;
+}
+
+.btn-view {
+    background: transparent;
+    border: 1px solid #c5a059;
+    color: #c5a059;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
 }
 
 .product-card {
