@@ -1,24 +1,30 @@
-document.querySelectorAll('.btn-blue').forEach(button => {
-    button.onclick = function() {
-        const card = this.parentElement.parentElement;
-        const img = card.querySelector('img').src;
-        const title = card.querySelector('h3').innerText;
-        const price = card.querySelector('.price').innerText;
-
-        document.getElementById('modalImg').src = img;
-        document.getElementById('modalTitle').innerText = title;
-        document.getElementById('modalPrice').innerText = price;
+document.querySelectorAll('.shop-now-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const item = this.closest('.gallery-item');
         
-        // Custom info for each mask
-        if(title.includes("Mayura")) {
-            document.getElementById('modalSize').innerText = "12x15 inches";
-            document.getElementById('modalDescription').innerText = "Bringing peace and harmony to your home.";
-        }
+        // Get data from attributes
+        const name = item.getAttribute('data-name');
+        const price = item.getAttribute('data-price');
+        const desc = item.getAttribute('data-desc');
+        const size = item.getAttribute('data-size');
+        const ship = item.getAttribute('data-ship');
+        const img = item.querySelector('img').src;
 
-        document.getElementById('productModal').style.display = "block";
-    }
+        // Hide Gallery & Show Details
+        document.getElementById('gallerySection').style.display = 'none';
+        document.getElementById('productDetail').style.display = 'block';
+
+        // Set Content
+        document.getElementById('detailTitle').innerText = name;
+        document.getElementById('detailPrice').innerText = price;
+        document.getElementById('detailDesc').innerText = desc;
+        document.getElementById('detailSize').innerText = size;
+        document.getElementById('detailShip').innerText = ship;
+        document.getElementById('detailImg').src = img;
+
+        // Trigger Animation
+        setTimeout(() => {
+            document.querySelector('.detail-left').classList.add('animate-in');
+        }, 100);
+    });
 });
-
-document.querySelector('.close-btn').onclick = function() {
-    document.getElementById('productModal').style.display = "none";
-}

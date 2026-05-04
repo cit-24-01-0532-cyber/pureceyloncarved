@@ -1,100 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pure Ceylon Carved | Gallery</title>
+    <title>Pure Ceylon Carved | Premium Store</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+
+    <header id="mainHeader">
         <div class="logo">PURE CEYLON CARVED</div>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="#">Gallery</a>
-            <a href="#">Contact</a>
+            <a href="#" onclick="location.reload()">HOME</a>
+            <a href="#">GALLERY</a>
+            <a href="#">CONTACT</a>
         </nav>
     </header>
 
-    <section class="main-banner">
-        <div class="banner-content">
-            <h1>The Legacy of Ancient Ceylon</h1>
-            <p>Authentic hand-carved masks with centuries of protection.</p>
+    <section id="gallerySection" class="full-screen-gallery">
+        <div class="gallery-item" data-name="Mayura Raksha" data-price="$189" data-desc="The Peacock mask brings peace and prosperity to your home." data-size="12x15 inches" data-ship="$20">
+            <img src="mask1.png" alt="Mayura Raksha">
+            <div class="item-overlay">
+                <h3>Mayura Raksha</h3>
+                <button class="shop-now-btn">SHOP NOW</button>
+            </div>
+        </div>
+        <div class="gallery-item" data-name="Naga Raksha" data-price="$210" data-desc="The Cobra mask wards off evil spirits and negative energy." data-size="14x16 inches" data-ship="Free Shipping">
+            <img src="mask2.png" alt="Naga Raksha">
+            <div class="item-overlay">
+                <h3>Naga Raksha</h3>
+                <button class="shop-now-btn">SHOP NOW</button>
+            </div>
+        </div>
+        <div class="gallery-item" data-name="Gira Raksha" data-price="$155" data-desc="The Parrot mask symbolizes freedom and vibrant nature." data-size="10x12 inches" data-ship="$15">
+            <img src="mask3.png" alt="Gira Raksha">
+            <div class="item-overlay">
+                <h3>Gira Raksha</h3>
+                <button class="shop-now-btn">SHOP NOW</button>
+            </div>
+        </div>
+        <div class="gallery-item" data-name="Kalu Kumara" data-price="$175" data-desc="A traditional mask representing mystic guardian spirits." data-size="12x14 inches" data-ship="$18">
+            <img src="mask4.png" alt="Kalu Kumara">
+            <div class="item-overlay">
+                <h3>Kalu Kumara</h3>
+                <button class="shop-now-btn">SHOP NOW</button>
+            </div>
+        </div>
+        <div class="gallery-item" data-name="Ginijal Raksha" data-price="$195" data-desc="The Fire mask represents power and intense protection." data-size="13x15 inches" data-ship="Free Shipping">
+            <img src="mask5.png" alt="Ginijal Raksha">
+            <div class="item-overlay">
+                <h3>Ginijal Raksha</h3>
+                <button class="shop-now-btn">SHOP NOW</button>
+            </div>
         </div>
     </section>
 
-    <section class="collection-section">
-        <h2 class="section-title">Curated Collection</h2>
-    <section class="full-screen-gallery">
-    <div class="gallery-item">
-        <img src="mask1.png" alt="Mask 1">
-        <div class="item-overlay">
-            <h3>Mayura Raksha</h3>
-            <button class="btn-shop">Shop Now</button>
-        </div>
-    </div>
-
-    <div class="gallery-item">
-        <img src="mask2.png" alt="Mask 2">
-        <div class="item-overlay">
-            <h3>Naga Raksha</h3>
-            <button class="btn-shop">Shop Now</button>
-        </div>
-    </div>
-
-    <div class="gallery-item">
-        <img src="mask3.png" alt="Mask 3">
-        <div class="item-overlay">
-            <h3>Gira Raksha</h3>
-            <button class="btn-shop">Shop Now</button>
-        </div>
-    </div>
-
-    <div class="gallery-item">
-        <img src="mask4.png" alt="Mask 4">
-        <div class="item-overlay">
-            <h3>Kalu Kumara</h3>
-            <button class="btn-shop">Shop Now</button>
-        </div>
-    </div>
-
-    <div class="gallery-item">
-        <img src="mask5.png" alt="Mask 5">
-        <div class="item-overlay">
-            <h3>Ginijal Raksha</h3>
-            <button class="btn-shop">Shop Now</button>
-        </div>
-    </div>
-</section> 
-<div id="productModal" class="modal">
-    <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <div class="modal-body">
-            <div class="product-left">
-                <img id="modalImg" src="" alt="Product Image">
+    <section id="productDetail" class="product-detail-view">
+        <button class="back-btn" onclick="location.reload()">BACK TO GALLERY</button>
+        <div class="detail-container">
+            <div class="detail-left">
+                <img id="detailImg" src="" alt="Mask">
             </div>
-            <div class="product-right">
-                <h2 id="modalTitle">Product Name</h2>
-                <div id="modalPrice" class="highlight-price">$0.00</div>
-                <p id="modalDescription">Description goes here...</p>
-                <ul class="product-specs">
+            <div class="detail-right">
+                <h1 id="detailTitle">Mask Name</h1>
+                <div id="detailPrice" class="highlight-price">$000</div>
+                <p id="detailDesc">Description...</p>
+                <ul class="specs-list">
                     <li><strong>Material:</strong> Authentic Kaduru Wood (Leya)</li>
-                    <li><strong>Size:</strong> <span id="modalSize">Standard</span></li>
-                    <li><strong>Shipping:</strong> <span id="modalShipping">Free Worldwide</span></li>
-                    <li><strong>Handcrafted:</strong> 100% Traditional Methods</li>
+                    <li><strong>Size:</strong> <span id="detailSize">Standard</span></li>
+                    <li><strong>Shipping:</strong> <span id="detailShip">Calculated at checkout</span></li>
+                    <li><strong>Craft:</strong> 100% Traditional Handcarved</li>
                 </ul>
-                <button class="btn-blue">ADD TO CART</button>
+                <button class="add-to-cart">ADD TO CART</button>
             </div>
         </div>
-    </div>
-</div>   
-         </div>
     </section>
 
-    <footer>
-        &copy; 2026 Pure Ceylon Carved. All Rights Reserved.
-    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

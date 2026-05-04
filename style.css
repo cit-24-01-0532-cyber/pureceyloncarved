@@ -1,97 +1,42 @@
-/* Modal Styling */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.95);
-    overflow: hidden;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #000; color: #fff; font-family: 'Poppins', sans-serif; overflow-x: hidden; }
 
-.modal-content {
-    background-color: #1a1a1a;
-    margin: 5% auto;
-    padding: 40px;
-    width: 80%;
-    max-width: 1000px;
-    border-radius: 20px;
-    position: relative;
-    animation: slideUp 0.5s ease;
-}
+/* Header */
+header { padding: 30px; text-align: center; background: #000; border-bottom: 1px solid #222; }
+.logo { font-family: 'Playfair Display', serif; font-size: 24px; color: #c5a059; letter-spacing: 5px; }
+nav a { color: #fff; text-decoration: none; margin: 0 15px; font-size: 12px; letter-spacing: 2px; }
 
-@keyframes slideUp {
-    from { transform: translateY(100px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
+/* Gallery */
+.full-screen-gallery { display: flex; height: 85vh; width: 100%; transition: 0.5s; }
+.gallery-item { flex: 1; position: relative; overflow: hidden; border-right: 1px solid #111; cursor: pointer; transition: flex 0.7s ease; }
+.gallery-item:hover { flex: 1.5; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5); transition: 0.6s; }
+.gallery-item:hover img { filter: brightness(1); transform: scale(1.05); }
 
-.modal-body {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-}
+.item-overlay { position: absolute; bottom: 10%; width: 100%; text-align: center; opacity: 0; transition: 0.4s; }
+.gallery-item:hover .item-overlay { opacity: 1; }
+.item-overlay h3 { margin-bottom: 15px; font-family: 'Playfair Display', serif; font-size: 1.5rem; }
 
-.product-left {
-    flex: 1;
-    animation: fadeInLeft 0.8s ease forwards;
-}
+.shop-now-btn { background: #fff; color: #000; border: none; padding: 10px 20px; font-weight: bold; cursor: pointer; border-radius: 5px; }
 
-@keyframes fadeInLeft {
-    from { transform: translateX(50px); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-}
+/* Product Detail View */
+.product-detail-view { display: none; padding: 50px 10%; background: #000; min-height: 90vh; }
+.back-btn { background: none; color: #666; border: 1px solid #333; padding: 8px 15px; cursor: pointer; margin-bottom: 30px; }
 
-.product-left img {
-    width: 100%;
-    max-height: 500px;
-    object-fit: contain;
-}
+.detail-container { display: flex; align-items: center; gap: 50px; }
 
-.product-right {
-    flex: 1.2;
-    color: white;
-}
+.detail-left { flex: 1; opacity: 0; transform: translateX(100px); transition: 0.8s forwards; }
+.detail-left img { width: 100%; max-height: 550px; object-fit: contain; }
 
-.highlight-price {
-    font-size: 32px;
-    font-weight: bold;
-    color: #0056b3; /* Highlighted Blue */
-    margin: 20px 0;
-    background: rgba(0, 86, 179, 0.1);
-    display: inline-block;
-    padding: 5px 15px;
-    border-radius: 5px;
-}
+.detail-right { flex: 1; }
+.highlight-price { font-size: 35px; color: #0066cc; font-weight: 600; margin: 20px 0; background: rgba(0,102,204,0.1); display: inline-block; padding: 5px 20px; border-radius: 5px; }
+#detailDesc { color: #aaa; margin-bottom: 30px; }
 
-.product-specs {
-    list-style: none;
-    margin-top: 25px;
-    padding: 0;
-}
+.specs-list { list-style: none; margin-bottom: 40px; }
+.specs-list li { margin-bottom: 15px; color: #fff; font-size: 15px; padding-left: 25px; position: relative; }
+.specs-list li::before { content: "•"; color: #0066cc; position: absolute; left: 0; font-size: 20px; }
 
-.product-specs li {
-    margin-bottom: 12px;
-    font-size: 15px;
-    color: #ccc;
-    position: relative;
-    padding-left: 20px;
-}
+.add-to-cart { background: #0066cc; color: #fff; border: none; padding: 15px 40px; border-radius: 5px; font-weight: bold; cursor: pointer; width: 100%; }
 
-.product-specs li::before {
-    content: "•";
-    color: #0056b3;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-}
-
-.close-btn {
-    position: absolute;
-    right: 25px;
-    top: 20px;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-}
+/* Animation trigger */
+.animate-in { opacity: 1 !important; transform: translateX(0) !important; }
