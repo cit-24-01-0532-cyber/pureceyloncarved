@@ -1,0 +1,43 @@
+body {
+    background-color: #0a0a0a; /* Deep Black */
+    color: #f5f5dc; /* Cream Text */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+header {
+    padding: 40px;
+    text-align: center;
+    border-bottom: 1px solid #332211;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    color: #c5a059; /* Gold/Copper */
+}
+
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero-bg.jpg');
+    background-size: cover;
+}
+
+.btn-premium {
+    padding: 15px 30px;
+    background-color: #c5a059;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.btn-premium:hover {
+    background-color: #f5f5dc;
+}
