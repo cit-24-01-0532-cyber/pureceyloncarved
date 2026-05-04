@@ -1,29 +1,156 @@
+/* 1. මූලික සැකසුම් (Basic Settings) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --gold: #c5a059;
+    --dark-bg: #0a0a0a;
+    --card-bg: #161616;
+    --text-cream: #f5f5dc;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-cream);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* 2. Header & Navigation */
+header {
+    padding: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom: 2px solid var(--gold);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: var(--text-cream);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+/* 3. Hero Section (ඔයාගේ අලුත් පින්තූරය සමඟ) */
 .hero {
-    height: 90vh; /* ටිකක් ලොකුවට පේන්න */
+    height: 75vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* ඔයා upload කරපු පින්තූරය මෙතනට link වෙනවා */
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('Gemini_Generated_Image_aitqk3aitqk3aitq.png');
-    background-size: contain; /* පින්තූරය සම්පූර්ණයෙන් පේන්න */
-    background-repeat: no-repeat;
+    /* මෙතන ඔයා එවපු පින්තූරයේ නම හරියටම තියෙන්න ඕනේ */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('Gemini_Generated_Image_aitqk3aitqk3aitq.png'); 
+    background-size: cover;
     background-position: center;
-    background-color: #050505; /* පින්තූරය නැති වෙලාවට කළු පාට */
-    box-shadow: inset 0 0 100px rgba(197, 160, 89, 0.2); /* පොඩි රන්වන් එළියක් */
+    background-attachment: fixed;
 }
 
-.hero-content h1 {
+.hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 4rem;
-    color: #f5f5dc;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
-    margin-bottom: 5px;
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
 }
 
-.hero-content p {
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* 4. Collection Grid */
+.collection-title {
+    text-align: center;
+    margin: 60px 0 30px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--gold);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 0 50px 80px 50px;
+}
+
+.product-card {
+    background: var(--card-bg);
+    border: 1px solid #222;
+    padding: 25px;
+    text-align: center;
+    transition: 0.4s;
+    border-radius: 5px;
+}
+
+.product-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 3px;
+}
+
+.product-card h3 {
+    margin: 15px 0 5px 0;
+    font-weight: 600;
+}
+
+.price {
+    color: var(--gold);
     font-size: 1.3rem;
-    color: #c5a059; /* Gold color */
-    font-weight: 300;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.btn-invoke {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 12px 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.8rem;
     letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.btn-invoke:hover {
+    background: var(--gold);
+    color: black;
+}
+
+/* 5. Footer */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #000;
+    border-top: 1px solid #222;
+    font-size: 0.8rem;
+    opacity: 0.7;
 }
